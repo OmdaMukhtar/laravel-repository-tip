@@ -50,6 +50,26 @@ abstract class BaseRepository
 }
 ```
 
+So The repository post also will look like:
+```php
+<?php
+
+namespace App\Repository\Eloquent;
+use App\Repository\Contract\IPost;
+use App\Repository\Eloquent\BaseRepository;
+use App\Post;
+
+class PostRepository  extends BaseRepository implements IPost
+{
+    public function model()
+    {
+        return Post::class;
+    }
+
+}
+
+```
+
 Then we use it in our controller like so:
 ```php
 <?php
