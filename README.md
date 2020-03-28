@@ -6,9 +6,9 @@ namespace App\Repository\Contract;
 interface IBase
 {
     public function all();
-    public function show();
+    public function show($id);
     public function store();
-    public function destroy();
+    public function destroy($id);
 }
 ```
 And our Repository Eloquent could be :
